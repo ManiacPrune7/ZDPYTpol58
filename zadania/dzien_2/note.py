@@ -21,7 +21,18 @@ class Note:
             return True
         return False
 
+    def modify_memo(self, memo):
+        self.memo = memo
 
-note1 = Note("o 18 pon silka", ["biceps", "bialko"])
-print(note1.match("nogi"))
-print(note1.creation_date)
+    def modify_tags(self, tags):
+        self.tags = tags
+
+    def __str__(self):
+        return f"<OBJ> Note id: {self.id_}; " \
+               f"memo: {self.memo}; tags: {self.tags} <OBJ>"
+
+
+if __name__ == '__main__':
+    note1 = Note("o 18 pon silka", ["biceps", "bialko"])
+    print(note1.match("nogi"))
+    print(note1.creation_date)
