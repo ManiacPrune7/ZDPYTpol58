@@ -21,11 +21,12 @@ class Singleton:
 		return cls.__instance
 
 
-# s = Singleton()
-# ss = Singleton()
 s2 = Singleton.get_instance()
 s1 = Singleton.get_instance()
 print(s2.to_be_kept)
 s2.to_be_kept = 5
 print(s1.to_be_kept)
 print(id(s1), id(s2))
+
+s3 = Singleton()
+print(s3)

@@ -6,8 +6,13 @@
 from abc import ABC, abstractmethod
 
 
+class Receiver:
+    def action(self):
+        print("Receiver Action")
+
+
 class Command(ABC):
-    def __init__(self, recv):
+    def __init__(self, recv: Receiver):
         self.recv = recv
 
     @abstractmethod
@@ -20,13 +25,8 @@ class ConcreteCommand(Command):
         self.recv.action()
 
 
-class Receiver:
-    def action(self):
-        print("Receiver Action")
-
-
 class Invoker:
-    def __init__(self, cmd):
+    def __init__(self, cmd: Command):
         self.cmd = cmd
 
     def execute(self):

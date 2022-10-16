@@ -11,7 +11,7 @@ class Circle:
 		self.color = color
 
 	def draw(self):
-		"""Draws a rectangle"""
+		"""Draws a circle"""
 		pass
 
 	def get_area(self):

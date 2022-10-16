@@ -5,7 +5,7 @@
 
 
 class Profession:
-    ARTIST = "artist"
+    ARTIST = "super artist"
     LAWYER = "lawyer"
     TEACHER = "teacher"
     PROGRAMMER = "progammer"
